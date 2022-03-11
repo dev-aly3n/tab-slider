@@ -1,0 +1,20 @@
+@layer components {
+    .carosel::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .carosel-parent {
+      @apply relative block mx-auto overflow-hidden rounded-md h-full w-full;
+      .carosel {
+        scrollbar-width:none;
+        @apply flex justify-between items-center h-full overflow-x-auto;
+        > div {
+          @apply flex flex-row relative gap-x-5;
+          .wasteful-cover {
+            @apply absolute top-0 left-0 h-full w-full opacity-0 hidden cursor-pointer;
+          }
+        }
+      }
+    }
+  }
+  
